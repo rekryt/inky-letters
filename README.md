@@ -11,6 +11,11 @@ rm -rf .git #optional
 npm install
 ```
 
+How to use:
+```
+gulp
+```
+
 How to install gulp:
 ```
 npm install gulp-cli -g
