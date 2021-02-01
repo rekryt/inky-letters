@@ -2,16 +2,16 @@ module.exports = function () {
 	return {
 		browserSync: {
 			server: {
-				baseDir: "./dist/"
-			}
+				baseDir: './dist/',
+			},
 		},
 		styles: {
 			src: './scss/*.scss',
-			dest: './templates'
+			dest: './templates',
 		},
 		inky: {
 			src: './templates/*.html',
-			dest: './dist'
-		}
-	}
+			dest: './dist',
+		},
+	};
 };

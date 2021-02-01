@@ -1,13 +1,7 @@
-const $ = require("../global.js");
+const $ = require('../global.js');
 module.exports = function () {
-	$.gulp.task("watch", function () {
-		$.gulp.watch(
-			$.config.styles.src,
-			$.gulp.series("styles", "inky", "browserSyncReload")
-		);
-		$.gulp.watch(
-			$.config.inky.src,
-			$.gulp.series("inky", "browserSyncReload")
-		);
+	$.gulp.task('watch', function () {
+		$.gulp.watch($.config.styles.src, $.gulp.series('styles', 'inky', 'browserSyncReload'));
+		$.gulp.watch($.config.inky.src, $.gulp.series('inky', 'browserSyncReload'));
 	});
 };

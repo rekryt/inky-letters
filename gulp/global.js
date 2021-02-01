@@ -1,20 +1,20 @@
 const $ = {
 	/* config */
-	config: require("./config.js")(),
+	config: require('./config.js')(),
 
 	/* gulp modules */
-	gulp: require("gulp"),
-	gulpInlineCSS: require("gulp-inline-css"),
-	gulpInlineSource: require("gulp-inline-source"),
-	gulpSASS: require("gulp-sass"),
+	gulp: require('gulp'),
+	gulpInlineCSS: require('gulp-inline-css'),
+	gulpInlineSource: require('gulp-inline-source'),
+	gulpSASS: require('gulp-sass'),
 
 	/* inky */
-	inky: require("inky"),
+	inky: require('inky'),
 
 	/* browser-sync */
-	browserSync: require("browser-sync"),
+	browserSync: require('browser-sync'),
 };
 
-$.gulpSASS.compiler = require("node-sass");
+$.gulpSASS.compiler = require('node-sass');
 
 module.exports = $;

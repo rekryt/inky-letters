@@ -1,9 +1,9 @@
-const $ = require("../global.js");
+const $ = require('../global.js');
 module.exports = function () {
-	$.gulp.task("styles", function () {
+	$.gulp.task('styles', function () {
 		return $.gulp
 			.src($.config.styles.src)
-			.pipe($.gulpSASS().on("error", $.gulpSASS.logError))
+			.pipe($.gulpSASS().on('error', $.gulpSASS.logError))
 			.pipe($.gulp.dest($.config.styles.dest));
 	});
 };

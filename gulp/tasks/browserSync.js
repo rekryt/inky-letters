@@ -1,4 +1,4 @@
-const $ = require("../global.js");
+const $ = require('../global.js');
 
 module.exports = function () {
 	$.gulp.task('browserSync', function () {

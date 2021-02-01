@@ -1,6 +1,6 @@
-const $ = require("../global.js");
+const $ = require('../global.js');
 module.exports = function () {
-	$.gulp.task("inky", function () {
+	$.gulp.task('inky', function () {
 		return $.gulp
 			.src($.config.inky.src)
 			.pipe($.gulpInlineSource())
