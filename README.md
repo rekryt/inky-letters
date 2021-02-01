@@ -13,7 +13,8 @@ npm install
 
 How to use:
 ```
-gulp
+npm run dev
+npm run build
 ```
 
 How to install gulp:
