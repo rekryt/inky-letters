@@ -8,8 +8,8 @@
 
 @media only screen and (max-width: #{$global-breakpoint}) {
   table.body img {
-    width: auto !important;
-    height: auto !important;
+    width: auto;
+    height: auto;
   }
 
   table.body center {
@@ -28,9 +28,9 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: $global-gutter !important;
-    padding-right: $global-gutter !important;
-    
+    padding-left: $global-gutter-small !important;
+    padding-right: $global-gutter-small !important;
+
     // Nested columns won't double the padding
     .column,
     .columns {
@@ -41,14 +41,14 @@
 
   // Collpased columns have no gutter.
   .collapse {
-    table.body & .columns,
-    table.body & .column {
+    table.body & > tbody > tr > .columns,
+    table.body & > tbody > tr > .column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
   }
 
-  //Basic grid rules
+  // Basic grid rules
   @for $i from 1 through $grid-column-count {
     td.small-#{$i},
     th.small-#{$i} {
@@ -67,25 +67,10 @@
     width: 100% !important;
   }
 
-
-  //Rules for the Center Tag
-  @for $i from 1 through ($grid-column-count - 1) {
-    .body .columns td.small-#{$i},
-    .body .column td.small-#{$i},
-    td.small-#{$i} center,
-
-    .body .columns th.small-#{$i},
-    .body .column th.small-#{$i},
-    th.small-#{$i} center {
-      display: inline-block !important;
-      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
-    }
-  }
-
   @for $i from 1 through ($grid-column-count - 1) {
     table.body td.small-offset-#{$i},
     table.body th.small-offset-#{$i} {
-    //1.5 takes in effect a whole empty cell.
+      //1.5 takes in effect a whole empty cell.
       margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
       Margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
@@ -109,14 +94,15 @@
   //menu
   table.menu {
     width: 100% !important;
-    
+
     td,
     th {
       width: auto !important;
       display: inline-block !important;
     }
 
-    &.vertical, &.small-vertical {
+    &.vertical,
+    &.small-vertical {
       td,
       th {
         display: block !important;
@@ -124,14 +110,30 @@
     }
   }
 
-  //Centers the menus!
+  // Centers the menus!
   table.menu[align="center"] {
     width: auto !important;
   }
 
-  //Buttons
-  table.button.expand {
+  // expands buttons for small only
+  table.button.small-expand,
+  table.button.small-expanded {
     width: 100% !important;
+
+    table {
+      width: 100%;
+
+      a {
+        text-align: center !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    center {
+      min-width: 0;
+    }
   }
 }
 

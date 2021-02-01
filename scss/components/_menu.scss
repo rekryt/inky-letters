@@ -18,17 +18,18 @@ $menu-item-gutter: 10px !default;
 /// @type Color
 $menu-item-color: $primary-color !default;
 
-
 table.menu {
   width: $global-width;
 
   td.menu-item,
-  th.menu-item{
-    padding: $menu-item-padding;
+  th.menu-item {
+    padding-top: $menu-item-padding;
     padding-right: $menu-item-gutter;
+    padding-bottom: $menu-item-padding;
+    padding-left: $menu-item-padding;
 
     a {
-      color: $menu-item-color; 
+      color: $menu-item-color;
     }
   }
 }
@@ -37,8 +38,10 @@ table.menu {
 table.menu.vertical {
   td.menu-item,
   th.menu-item {
-    padding: $menu-item-padding;
+    padding-top: $menu-item-padding;
     padding-right: 0;
+    padding-bottom: $menu-item-padding;
+    padding-left: $menu-item-padding;
     display: block;
 
     a {
@@ -64,5 +67,21 @@ table.menu.text-center a {
 
 //Centers the menus!
 .menu[align="center"] {
-  width: auto !important;
+  width: auto;
+}
+
+// Remove outside padding so that the menu aligns with other elements on the page
+.menu:not(.float-center) {
+    .menu-item:first-child{padding-left:0!important;}
+    .menu-item:last-child{padding-right:0!important;}
+}
+.menu.vertical .menu-item {
+    padding-left:0!important;
+    padding-right:0!important;
+}
+@media only screen and (max-width: #{$global-breakpoint}) {
+    .menu.small-vertical .menu-item {
+        padding-left:0!important;
+        padding-right:0!important;
+    }
 }
