@@ -8,7 +8,9 @@ module.exports = function () {
 			.pipe(
 				$.gulpInlineCSS({
 					preserveMediaQueries: true,
+					removeHtmlSelectors: true,
 					removeLinkTags: false,
+					removeStyleTags: false,
 				})
 			)
 			.pipe($.gulp.dest($.config.inky.dest));
