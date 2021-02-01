@@ -7,4 +7,5 @@ module.exports = function () {
 			$.gulp.parallel("browserSync", "watch")
 		)
 	);
+	$.gulp.task("build", $.gulp.series($.gulp.series("styles", "inky")));
 };
