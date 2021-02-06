@@ -4,6 +4,7 @@ module.exports = function () {
 		return $.gulp
 			.src($.config.styles.src)
 			.pipe($.gulpSASS().on('error', $.gulpSASS.logError))
-			.pipe($.gulp.dest($.config.styles.dest));
+			.pipe($.gulp.dest($.config.styles.dest))
+			.pipe($.gulp.dest($.config.styles.dest2));
 	});
 };

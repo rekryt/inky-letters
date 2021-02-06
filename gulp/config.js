@@ -8,6 +8,7 @@ module.exports = function () {
 		styles: {
 			src: './scss/*.scss',
 			dest: './templates',
+			dest2: './dist',
 		},
 		inky: {
 			src: './templates/*.html',
