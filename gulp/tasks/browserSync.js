@@ -1,11 +1,11 @@
 const $ = require('../global.js');
 
 module.exports = function () {
-	$.gulp.task('browserSync', function () {
-		return $.browserSync.init($.config.browserSync);
-	});
-	$.gulp.task('browserSyncReload', function (done) {
-		$.browserSync.reload();
-		done();
-	});
+    $.gulp.task('browserSync', function () {
+        return $.browserSync.init($.config.browserSync);
+    });
+    $.gulp.task('browserSyncReload', function (done) {
+        $.browserSync.reload();
+        done();
+    });
 };
